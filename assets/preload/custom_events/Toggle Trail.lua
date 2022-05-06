@@ -77,7 +77,18 @@ function createTrailFrame(tag)
 		num = curTrailDad;
 		curTrailDad = curTrailDad + 1;
 		if trailEnabledDad then
-			color = getColorFromHex('FFA046');
+			if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
+                		color = getColorFromHex('9d00ff');
+           		 end
+           		 if getProperty('dad.animation.curAnim.name') == 'singRIGHT' then
+              			color = getColorFromHex('ff0026');
+           		 end
+           		 if getProperty('dad.animation.curAnim.name') == 'singUP' then
+            			color = getColorFromHex('00ff04');
+         		  end
+            		if getProperty('dad.animation.curAnim.name') == 'singDOWN' then
+              			color = getColorFromHex('0059ff');
+			end
 			image = getProperty('dad.imageFile')
 			frame = getProperty('dad.animation.frameName');
 			x = getProperty('dad.x');
